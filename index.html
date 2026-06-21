@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome Fox Creative | Premium High-Conversion Web Design</title>
+    <meta name="description" content="Awesome Fox Creative crafts stunning, high-converting premium web experiences. Founded by Pramarsh, we build trustworthy digital platforms starting at ₹399.">
+    
+    <!-- Premium Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-base: #0a0a0a;          /* Deep Absolute Black */
+            --bg-panel: rgba(22, 22, 22, 0.75); /* Sleek Obsidian Glass */
+            --primary: #d4af37;          /* Premium Metallic Gold */
+            --secondary: #aa7c11;        /* Deep Rich Gold Accent */
+            --accent: #f3e5ab;           /* Soft Champagne Highlights */
+            --text-main: #f5f5f7;        /* Crisp Luxury Light Text */
+            --text-muted: #a0a0a5;       /* Polished Muted Slate Gray */
+            --grad-creative: linear-gradient(135deg, #f3e5ab 0%, #d4af37 50%, #aa7c11 100%);
+            --transition-smooth: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            line-height: 1.7;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* --- IMMERSIVE VIBRANT ECOSYSTEM BACKGROUNDS --- */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -10%; left: -10%;
+            width: 50vw; height: 50vw;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+            filter: blur(90px);
+            z-index: -2;
+            pointer-events: none;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            bottom: -10%; right: -10%;
+            width: 60vw; height: 60vw;
+            background: radial-gradient(circle, rgba(170, 124, 17, 0.05) 0%, transparent 70%);
+            filter: blur(100px);
+            z-index: -2;
+            pointer-events: none;
+        }
+
+        .scroll-tracker {
+            position: fixed;
+            top: 0; left: 0;
+            height: 4px;
+            background: var(--grad-creative);
+            width: 0%;
+            z-index: 2000;
+        }
+
+        /* Creative Navigation Bar */
+        header {
+            background: rgba(10, 10, 10, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 1.2rem 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-main);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            background: var(--grad-creative);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition-smooth);
+            position: relative;
+        }
+
+        .nav-links a:not(.nav-cta)::after {
+            content: '';
+            position: absolute;
+            width: 0; height: 2px;
+            bottom: -4px; left: 0;
+            background: var(--grad-creative);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-links a:not(.nav-cta):hover {
+            color: var(--primary);
+        }
+
+        .nav-links a:not(.nav-cta):hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            padding: 0.6rem 1.3rem;
+            border-radius: 50px;
+            color: var(--text-main) !important;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.05);
+        }
+
+        .nav-cta:hover {
+            background: var(--grad-creative);
+            border-color: transparent;
+            color: #0a0a0a !important;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.25);
+        }
+
+        /* Interactive Showcase Hero Workspace */
+        .hero {
+            padding: 8rem 8% 6rem 8%;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .hero-tag {
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            color: var(--primary);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 3.8rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .hero h1 em {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 400;
+            background: var(--grad-creative);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 1.15rem;
+            margin-bottom: 2.5rem;
+            max-width: 580px;
+        }
+
+        .cta-group {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn-gradient {
+            background: var(--grad-creative);
+            color: #0a0a0a;
+            padding: 1.1rem 2.2rem;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 12px;
+            display: inline-block;
+            transition: var(--transition-smooth);
+            box-shadow: 0 10px 25px -5px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-gradient:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 20px 35px -5px rgba(212, 175, 55, 0.45);
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(255, 255, 255, 0.01);
+            color: var(--text-main);
+            padding: 1.1rem 2.2rem;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 12px;
+            transition: var(--transition-smooth);
+        }
+
+        .btn-outline:hover {
+            background: rgba(212, 175, 55, 0.05);
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* Fluid Hero Graphic Box Container */
+        .hero-graphic {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image-frame {
+            width: 100%;
+            max-width: 440px;
+            height: 440px;
+            border-radius: 24px;
+            overflow: hidden;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 25px 50px -12px rgba(212, 175, 55, 0.25);
+            animation: floatShape 8s ease-in-out infinite;
+            background: linear-gradient(145deg, #121212, #1a1a1a); 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        /* Abstract Fox SVG Aesthetics */
+        .abstract-fox-svg {
+            width: 100%;
+            height: auto;
+            max-width: 320px;
+            filter: drop-shadow(0px 15px 30px rgba(212, 175, 55, 0.35));
+        }
+
+        @keyframes floatShape {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(2deg); }
+        }
+
+        /* User Friendly Trust Pillars (Capabilities) */
+        .section-padding { padding: 8rem 8%; }
+        
+        .section-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 5rem auto;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 1rem;
+        }
+
+        .grid-pillars {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .pillar-card {
+            background: var(--bg-panel);
+            border: 1px solid rgba(212, 175, 55, 0.08);
+            border-radius: 24px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pillar-img-box {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        .pillar-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-smooth);
+        }
+
+        .pillar-content {
+            padding: 2.5rem 2.2rem;
+        }
+
+        /* Color edge hover animation */
+        .pillar-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 3px;
+            background: var(--grad-creative);
+            transform: scaleX(0);
+            transform-origin: left;
+            z-index: 5;
+            transition: var(--transition-smooth);
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(212, 175, 55, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+            background: rgba(30, 30, 30, 0.9);
+        }
+
+        .pillar-card:hover .pillar-img-box img {
+            transform: scale(1.06);
+        }
+
+        .pillar-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .pillar-icon-box {
+            width: 50px;
+            height: 50px;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+            transition: var(--transition-smooth);
+        }
+
+        .pillar-card:hover .pillar-icon-box {
+            background: var(--grad-creative);
+            color: #0a0a0a;
+        }
+
+        .pillar-icon-box svg { width: 24px; height: 24px; fill: currentColor; }
+        .pillar-card h3 { font-size: 1.4rem; font-weight: 700; margin-bottom: 0.8rem; color: #fff; }
+        .pillar-card p { color: var(--text-muted); font-size: 0.98rem; }
+
+        /* Trustworthy Founder Dynamic Segment */
+        .founder-strip {
+            background: linear-gradient(180deg, transparent, rgba(22, 22, 22, 0.5), transparent);
+            padding: 6rem 8%;
+        }
+
+        .founder-wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 0.7fr 1.3fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .founder-identity {
+            background: var(--bg-panel);
+            border: 1px solid rgba(212, 175, 55, 0.08);
+            border-radius: 24px;
+            padding: 3rem 2rem;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+        }
+
+        .founder-badge {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 1.5rem auto;
+            background: var(--grad-creative);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #0a0a0a;
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.2);
+        }
+
+        .founder-identity h3 { font-size: 1.5rem; font-weight: 700; }
+        .founder-identity p { color: var(--primary); font-size: 0.85rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+
+        .founder-quote-box h2 { font-size: 2.4rem; font-weight: 800; margin-bottom: 1.2rem; }
+        .founder-quote-box p { color: var(--text-muted); font-size: 1.1rem; line-height: 1.8; }
+        .founder-statement {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.3rem;
+            color: var(--text-main);
+            margin: 1.5rem 0;
+            border-left: 3px solid var(--primary);
+            padding-left: 20px;
+        }
+
+        /* Monolithic Transparent Pricing Node */
+        .pricing-zone { position: relative; }
+        
+        .pricing-card-box {
+            max-width: 620px;
+            margin: 0 auto;
+            background: linear-gradient(180deg, rgba(30, 30, 30, 0.85) 0%, rgba(10, 10, 10, 0.95) 100%);
+            border: 2px solid rgba(212, 175, 55, 0.4);
+            border-radius: 24px;
+            padding: 4.5rem 3.5rem;
+            text-align: center;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+            position: relative;
+            transition: var(--transition-smooth);
+        }
+
+        .pricing-card-box:hover {
+            border-color: var(--primary);
+            box-shadow: 0 40px 80px rgba(212, 175, 55, 0.12);
+            transform: translateY(-4px);
+        }
+
+        .price-badge {
+            position: absolute;
+            top: -15px; left: 50%;
+            transform: translateX(-50%);
+            background: var(--grad-creative);
+            color: #0a0a0a;
+            padding: 6px 24px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            border-radius: 50px;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .pricing-card-box h3 { font-size: 2rem; font-weight: 800; margin-bottom: 1.5rem; }
+        
+        .price-fluid {
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            gap: 4px;
+            margin-bottom: 2rem;
+        }
+
+        .price-fluid .sym { font-size: 2.5rem; font-weight: 800; color: var(--primary); }
+        .price-fluid .val { font-size: 5.5rem; font-weight: 800; color: white; line-height: 1; }
+        .price-fluid .trm { color: var(--text-muted); font-size: 1.05rem; margin-left: 8px; }
+
+        .feature-ticks {
+            list-style: none;
+            text-align: left;
+            max-width: 420px;
+            margin: 0 auto 3.5rem auto;
+            display: grid;
+            gap: 1rem;
+        }
+
+        .feature-ticks li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #e2e8f0;
+            font-size: 1.05rem;
+        }
+
+        .feature-ticks li::before {
+            content: '✓';
+            color: var(--primary);
+            font-weight: 900;
+            font-size: 1.1rem;
+        }
+
+        /* Creative User-Centric High-Trust Contact Center */
+        .connect-hub {
+            background: radial-gradient(circle at 50% 50%, rgba(35, 30, 20, 0.4) 0%, var(--bg-base) 100%);
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .connect-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .connect-info h2 { font-size: 2.8rem; font-weight: 800; letter-spacing: -1px; margin-bottom: 1.2rem; }
+        .connect-info p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 2.5rem; }
+
+        .channels-grid {
+            display: grid;
+            gap: 20px;
+        }
+
+        .channel-card {
+            background: var(--bg-panel);
+            border: 1px solid rgba(212, 175, 55, 0.08);
+            padding: 1.8rem;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-smooth);
+        }
+
+        .channel-card:hover {
+            transform: translateX(10px);
+            background: rgba(255, 255, 255, 0.02);
+            border-color: var(--primary);
+        }
+
+        .channel-icon {
+            width: 50px; height: 50px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.02);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.4rem;
+            transition: var(--transition-smooth);
+        }
+
+        .channel-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+
+        .channel-card:hover .channel-icon {
+            background: var(--grad-creative);
+            color: #0a0a0a;
+        }
+
+        .channel-details h4 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 2px; }
+        .channel-details p { font-size: 1.1rem; font-weight: 600; color: var(--text-main); margin-bottom: 0; }
+
+        /* Integrated Quick Mail System Form */
+        .mail-box-panel {
+            background: var(--bg-panel);
+            border: 1px solid rgba(212, 175, 55, 0.08);
+            border-radius: 24px;
+            padding: 3rem;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .mail-box-panel h3 { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .mail-box-panel p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 2rem; }
+
+        .form-cluster { margin-bottom: 1.5rem; }
+        .form-cluster label { display: block; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px; letter-spacing: 0.5px; }
+        
+        .form-cluster input, .form-cluster textarea {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 10px;
+            padding: 1rem;
+            color: white;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition-smooth);
+        }
+
+        .form-cluster input:focus, .form-cluster textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.1);
+        }
+
+        .btn-submit {
+            width: 100%;
+            background: var(--grad-creative);
+            color: #0a0a0a;
+            border: none;
+            padding: 1.1rem;
+            font-weight: 700;
+            font-size: 1rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.35);
+        }
+
+        /* Clean Human Footer Area */
+        footer {
+            background-color: #050505;
+            padding: 4rem 8% 2rem 8%;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+            text-align: center;
+        }
+
+        .footer-brand h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--primary); }
+        .footer-brand p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 2rem; }
+        .footer-links { display: flex; justify-content: center; gap: 30px; margin-bottom: 2rem; }
+        .footer-links a { color: var(--text-muted); text-decoration: none; font-size: 0.95rem; transition: var(--transition-smooth); }
+        .footer-links a:hover { color: var(--primary); }
+        .footer-bottom { font-size: 0.85rem; color: #55555a; border-top: 1px solid rgba(212, 175, 55, 0.05); padding-top: 2rem; }
+
+        /* Responsive Mechanics Layout adaptation */
+        @media (max-width: 968px) {
+            header { padding: 1rem 5%; }
+            .nav-links { display: none; }
+            .hero { grid-template-columns: 1fr; text-align: center; padding-top: 5rem; gap: 40px; }
+            .hero-graphic { order: -1; }
+            .hero-image-frame { max-width: 100%; height: 350px; padding: 25px; }
+            .hero h1 { font-size: 2.8rem; }
+            .cta-group { justify-content: center; }
+            .founder-wrapper, .connect-container { grid-template-columns: 1fr; gap: 40px; }
+            .pricing-card-box { padding: 3.5rem 1.5rem; }
+            .mail-box-panel { padding: 2rem 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Dynamic Scroll Percentage Tracking Line -->
+    <div class="scroll-tracker" id="scrollTracker"></div>
+
+    <!-- Intuitive Floating Navigation Node -->
+    <header>
+        <a href="#" class="logo">AWESOME FOX<span>CREATIVE</span></a>
+        <nav class="nav-links">
+            <a href="#capabilities">Capabilities</a>
+            <a href="#about">The Identity</a>
+            <a href="#investment">Investment</a>
+            <a href="#connect" class="nav-cta">Let's Talk</a>
+        </nav>
+    </header>
+
+    <!-- Interactive Creative Hero Engine -->
+    <section class="hero">
+        <div class="hero-text">
+            <span class="hero-tag">Aesthetic Web Atelier</span>
+            <h1>We design <em>stunning websites</em> that capture absolute trust.</h1>
+            <p>Awesome Fox Creative fuses beautiful modern layout art with human psychology. No heavy corporate boredom—just ultra-clean code built for conversion and massive digital growth.</p>
+            <div class="cta-group">
+                <a href="#investment" class="btn-gradient">View Launch Package</a>
+                <a href="#connect" class="btn-outline">Initiate Connection</a>
+            </div>
+        </div>
+        <div class="hero-graphic">
+            <!-- Native Inline Abstract Geometry Fox Logo Frame -->
+            <div class="hero-image-frame">
+                <svg class="abstract-fox-svg" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Left Ear -->
+                    <polygon points="250,220 130,100 190,260" fill="url(#goldGrad-1)" />
+                    <!-- Right Ear -->
+                    <polygon points="250,220 370,100 310,260" fill="url(#goldGrad-2)" />
+                    <!-- Left Outer Cheek Snout -->
+                    <polygon points="130,100 110,280 210,310" fill="url(#goldGrad-3)" opacity="0.85" />
+                    <!-- Right Outer Cheek Snout -->
+                    <polygon points="370,100 390,280 290,310" fill="url(#goldGrad-1)" opacity="0.85" />
+                    <!-- Main Central Face Structure -->
+                    <polygon points="250,220 190,260 210,310 250,330" fill="url(#goldGrad-2)" />
+                    <polygon points="250,220 310,260 290,310 250,330" fill="url(#goldGrad-3)" />
+                    <!-- Lower Nose Bridge Geometric Point -->
+                    <polygon points="250,330 210,310 250,420" fill="url(#goldGrad-1)" />
+                    <polygon points="250,330 290,310 250,420" fill="url(#goldGrad-2)" />
+                    <!-- Absolute Base Nose Core Accent -->
+                    <polygon points="250,400 240,420 260,420" fill="#f3e5ab" />
+                    
+                    <!-- Advanced Vector Color Gradients Configuration -->
+                    <defs>
+                        <linearGradient id="goldGrad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#f3e5ab" />
+                            <stop offset="50%" stop-color="#d4af37" />
+                            <stop offset="100%" stop-color="#aa7c11" />
+                        </linearGradient>
+                        <linearGradient id="goldGrad-2" x1="100%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#d4af37" />
+                            <stop offset="100%" stop-color="#aa7c11" />
+                        </linearGradient>
+                        <linearGradient id="goldGrad-3" x1="0%" y1="100%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#aa7c11" />
+                            <stop offset="100%" stop-color="#f3e5ab" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value & Trust Capabilities Architecture Grid -->
+    <section id="capabilities" class="section-padding">
+        <div class="section-header">
+            <span class="hero-tag">Core Offerings</span>
+            <h2>Complete Web Architectures</h2>
+            <p>From commercial pipelines to luxury showcases, we systematically build premium visual setups optimized for every digital trajectory.</p>
+        </div>
+
+        <div class="grid-pillars">
+            <!-- Website Type 1: Corporate/Firm Platform -->
+            <div class="pillar-card">
+                <div class="pillar-img-box">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80" alt="Corporate Enterprise Tech Website Interface Framework Portfolio Block">
+                </div>
+                <div class="pillar-content">
+                    <div class="pillar-icon-box">
+                        <svg viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>
+                    </div>
+                    <h3>Enterprise & Business Hubs</h3>
+                    <p>High-end digital infrastructure built specifically for corporations, luxury firms, and financial organizations seeking authoritative consumer trust.</p>
+                </div>
+            </div>
+
+            <!-- Website Type 2: E-Commerce Storefronts -->
+            <div class="pillar-card">
+                <div class="pillar-img-box">
+                    <img src="https://images.unsplash.com/photo-1511556532299-8f662fc26c06?auto=format&fit=crop&w=500&q=80" alt="Premium E-commerce Store Web Store Architecture Interface">
+                </div>
+                <div class="pillar-content">
+                    <div class="pillar-icon-box">
+                        <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+                    </div>
+                    <h3>High-Conversion E-Commerce</h3>
+                    <p>Flawless storefront setups, structural layouts, and interactive funnels streamlined to showcase commercial inventory with premium aesthetic ease.</p>
+                </div>
+            </div>
+
+            <!-- Website Type 3: Personal Brand & Creative Portfolios -->
+            <div class="pillar-card">
+                <div class="pillar-img-box">
+                    <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=500&q=80" alt="Creative Authority Personal Brand Luxury Portfolio Layout Screen">
+                </div>
+                <div class="pillar-content">
+                    <div class="pillar-icon-box">
+                        <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                    </div>
+                    <h3>Authority Creator Portfolios</h3>
+                    <p>Bespoke digital canvases built for individual executives, elite content creators, and agencies seeking to magnify their personal brand presence status.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trustworthy Identity / Founder Segment -->
+    <section id="about" class="founder-strip">
+        <div class="founder-wrapper">
+            <div class="founder-identity">
+                <div class="founder-badge">P</div>
+                <h3>Pramarsh Singh</h3>
+                <p>Founder & Designer</p>
+            </div>
+            <div class="founder-quote-box">
+                <span class="hero-tag" style="margin-bottom:0.5rem;">The Creative Vision</span>
+                <h2>Clean Code. Transparent Relations.</h2>
+                <p>I believe an internet interface shouldn't feel distant or synthetic. Great design relies on a balance of technical execution and immediate approachability.</p>
+                <div class="founder-statement">
+                    "Every digital product commissioned here is structured completely from basic code roots up, aiming to elevate genuine marketplace status."
+                </div>
+                <p style="font-size:0.95rem; font-weight:700; color:var(--primary);">— PRAMARSH, CREATIVE LEAD</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flagship Monolithic Pricing Plan -->
+    <section id="investment" class="section-padding pricing-zone">
+        <div class="section-header">
+            <span class="hero-tag">Transparent Value Pricing</span>
+            <h2>Simple Flat-Rate Initiation</h2>
+            <p>Premium modern creative production output without unexpected variable retainers.</p>
+        </div>
+
+        <div class="pricing-card-box">
+            <div class="price-badge">Sovereign Architecture Suite</div>
+            <h3>The Launch Blueprint</h3>
+            <p>An institutional-tier, dynamic web setup ideal for scaled creators, personal brands, and active modern firms.</p>
+            
+            <div class="price-fluid">
+                <span class="sym">₹</span>
+                <span class="val">399</span>
+                <span class="trm">/ starting allocation</span>
+            </div>
+
+            <ul class="feature-ticks">
+                <li>Bespoke Curated Graphic Design Frame</li>
+                <li>Fluid Custom Element CSS Micro-Animations</li>
+                <li>Full Adaptive Device Cross-Responsiveness</li>
+                <li>Strategic Client Hook Visual Sequence</li>
+                <li>Functional Contact Layout Forms & Anchors</li>
+                <li>Extremely Light Server Initialization Framework</li>
+            </ul>
+
+            <a href="#connect" class="btn-gradient" style="display:block; text-align:center;">Secure Setup Session</a>
+        </div>
+    </section>
+
+    <!-- Immersive Integrated Communication Terminal Hub -->
+    <section id="connect" class="section-padding connect-hub">
+        <div class="connect-container">
+            <div class="connect-info">
+                <span class="hero-tag">Inquire Directly</span>
+                <h2>Let's construct your next digital asset.</h2>
+                <p>Have an explicit creative objective in focus? Select your preferred pathway below to message me instantly. I actively reply to creative collaboration concepts.</p>
+                
+                <div class="channels-grid">
+                    <!-- Functional Email Pipeline Card -->
+                    <a href="mailto:pramarshsingh@gmail.com?subject=Creative%20Web%20Project%20Inquiry" class="channel-card">
+                        <div class="channel-icon">
+                            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        </div>
+                        <div class="channel-details">
+                            <h4>Direct Email Pipeline</h4>
+                            <p>pramarshsingh@gmail.com</p>
+                        </div>
+                    </a>
+
+                    <!-- Instagram Pipeline Link Card -->
+                    <a href="https://www.instagram.com/pramarsh_singh_16/?__pwa=1#" target="_blank" rel="noopener" class="channel-card">
+                        <div class="channel-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </div>
+                        <div class="channel-details">
+                            <h4>Official Instagram Handle</h4>
+                            <p>@pramarsh_singh_16</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Built-In Human Functional Quick Mail Form Node -->
+            <div class="mail-box-panel">
+                <h3>Transmit a Fast Message</h3>
+                <p>This auto-assembles a standard formatted email draft sent directly to my workspace.</p>
+                
+                <form id="quickMailForm">
+                    <div class="form-cluster">
+                        <label>Your Name / Enterprise Identity</label>
+                        <input type="text" id="senderName" placeholder="e.g. Alexander Vance" required>
+                    </div>
+                    <div class="form-cluster">
+                        <label>Briefly Detail Your Vision</label>
+                        <textarea id="senderMsg" rows="4" placeholder="Describe the digital asset framework you need constructed..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Generate Action Email Draft</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clean Layout System Footer Block -->
+    <footer>
+        <div class="footer-brand">
+            <h3>AWESOME FOX CREATIVE</h3>
+            <p>Fusing beautiful interfaces with lightning performance architecture.</p>
+        </div>
+        <div class="footer-links">
+            <a href="#capabilities">Core Pillars</a>
+            <a href="#about">The Designer</a>
+            <a href="#investment">Value Investment</a>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Awesome Fox Creative. Designed under the direct leadership of Pramarsh Singh. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- High Performance Interaction Engine -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Smooth Fluid Scroll Tracker Logic
+            const tracker = document.getElementById('scrollTracker');
+            if (tracker) {
+                window.addEventListener('scroll', () => {
+                    const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+                    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                    const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+                    tracker.style.width = scrolled + '%';
+                });
+            }
+
+            // Automated Quick Email Assembly Action Engine
+            const mailForm = document.getElementById('quickMailForm');
+            if (mailForm) {
+                mailForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const name = document.getElementById('senderName').value;
+                    const msg = document.getElementById('senderMsg').value;
+                    
+                    const targetEmail = 'pramarshsingh@gmail.com';
+                    const emailSubject = encodeURIComponent(`Project Inquiry from ${name}`);
+                    const emailBody = encodeURIComponent(`Hello Pramarsh,\n\nMy name is ${name}.\n\nProject Details:\n${msg}\n\nLet's coordinate a session soon.`);
+                    
+                    window.location.href = `mailto:${targetEmail}?subject=${emailSubject}?body=${emailBody}`;
+                });
+            }
+        });
+    </script>
+</body>
+</html>
